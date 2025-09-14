@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KrishiMinds - AI Farmer Advisory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login Page -->
+<div class="auth-container" id="authPage">
+  <div class="auth-box">
+    <h1>🌾 KrishiMinds</h1>
+    <p class="subtitle">AI-based Farmer Query Support & Advisory System</p>
+    <form id="loginForm" class="form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="appPage" class="hidden">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌾 KrishiMinds</div>
+    <ul>
+      <li><a href="#" id="homeBtn">Home</a></li>
+      <li><a href="#" id="advisoryBtn">Advisory</a></li>
+      <li><a href="#" id="qaBtn">Q&A</a></li>
+      <li><a href="#" id="profileBtn">Profile</a></li>
+      <li><a href="#" id="contactBtn">Contact</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Screen -->
+  <section class="screen" id="homeScreen">
+    <div class="hero">
+      <h1>Empowering Farmers with AI</h1>
+      <p>Get real-time Crop, Weather, Soil & Pest Insights</p>
+      <button class="btn-primary" id="goToQA">Ask a Question</button>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <h3>🌦 Weather Updates</h3>
+        <p>Accurate local forecasts to plan your crops</p>
+        <button class="btn-outline">Check</button>
+      </div>
+      <div class="feature-card">
+        <h3>🌱 Soil Health</h3>
+        <p>AI-based soil quality recommendations</p>
+        <button class="btn-outline">Analyze</button>
+      </div>
+      <div class="feature-card">
+        <h3>🐛 Pest Alerts</h3>
+        <p>Stay safe from crop-damaging pests</p>
+        <button class="btn-outline">View Alerts</button>
+      </div>
+    </div>
+    <div class="tips">
+      <h3>💡 Tip of the Day</h3>
+      <p id="dailyTip">Water wheat crops early in the morning for better absorption.</p>
+    </div>
+  </section>
+
+  <!-- Advisory Screen -->
+  <section class="screen hidden" id="advisoryScreen">
+    <h2>💬 AI Farmer Advisory Chat</h2>
+    <div class="messages" id="chatMessages"></div>
+    <div class="chat-box">
+      <input type="text" id="chatInput" placeholder="Type your question...">
+      <button id="sendBtn" class="btn-primary">Send</button>
+    </div>
+  </section>
+
+  <!-- Q&A Screen -->
+  <section class="screen hidden" id="qaScreen">
+    <h2>📖 Farmers' Questions & Answers</h2>
+    <div id="qaList" class="qa-list"></div>
+    <div class="qa-submit">
+      <input type="text" id="newQuestion" placeholder="Ask your question...">
+      <button id="submitQuestion" class="btn-primary">Submit Question</button>
+    </div>
+    <button class="btn-outline" id="backHome">⬅ Back to Home</button>
+  </section>
+
+  <!-- Profile Screen -->
+  <section class="screen hidden" id="profileScreen">
+    <h2>👤 My Profile</h2>
+    <div class="profile-card">
+      <div class="profile-pic">👩‍🌾</div>
+      <label>Name:</label><input type="text" id="profileName" value="Shrutika Chavan">
+      <label>Email:</label><input type="email" id="profileEmail" value="shrutika@example.com">
+      <label>Phone:</label><input type="text" id="profilePhone" value="+91 9876543210">
+      <label>Farm Location:</label><input type="text" id="profileAddress" value="Pune, Maharashtra">
+      <label>Crop Type:</label><input type="text" id="profileCrop" value="Wheat">
+      <button class="btn-primary" id="saveProfile">Save Profile</button>
+    </div>
+  </section>
+
+  <!-- Contact Screen -->
+  <section class="screen hidden" id="contactScreen">
+    <h2>📬 Contact Us</h2>
+    <div class="contact-card">
+      <input type="text" id="contactName" placeholder="Your Name">
+      <input type="email" id="contactEmail" placeholder="Your Email">
+      <textarea id="contactMessage" placeholder="Your Message"></textarea>
+      <button class="btn-primary" id="sendContact">Send Message</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 KrishiMinds | Smart India Hackathon</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
